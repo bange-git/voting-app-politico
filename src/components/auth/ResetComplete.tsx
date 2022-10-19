@@ -9,7 +9,6 @@ import {
   SubmitButton,
 } from "./Register.style";
 import { Container, Heading } from "../../common/UI-Elements.style";
-import Link from "next/link";
 
 const ResetComplete = () => {
   return (
