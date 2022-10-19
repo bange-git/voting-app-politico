@@ -72,6 +72,7 @@ export const FlexContact = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 80vh;
 `;
 
 export const FlexRow = styled.div`
@@ -128,6 +129,9 @@ export const FormGroupRight = styled(FormGroup)`
   }
 `;
 
+export const ForgotPassWord = styled(FormGroup)`
+  align-items: end;
+`;
 export const InputField = styled.input`
   padding-left: 10px;
   height: 50px;
