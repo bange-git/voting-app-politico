@@ -60,3 +60,8 @@ export const Description = styled.p`
   font-size: 1.5rem;
   padding-left: 2rem;
 `;
+
+export const Heading = styled.h2`
+margin: 1rem;
+text-align: center;
+`
