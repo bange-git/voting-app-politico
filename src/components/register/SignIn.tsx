@@ -12,15 +12,12 @@ import {
   FormCard,
   Label,
   SubmitButton,
-  FlexRow,
-  FormGroupLeft,
-  FormGroupRight,
 } from "./Register.style";
 import { Container } from "../../common/UI-Elements.style";
 import { OR } from "./Register.style";
 import Link from "next/link";
 
-const Register = () => {
+const SignIn = () => {
   const { data: session } = useSession();
   console.log(session);
   const { push } = useRouter();
@@ -38,28 +35,12 @@ const Register = () => {
     signIn();
   };
 
-  //   interface ProviderProps {
-  //     name: string;
-  //     //Icon: () =>
-  //   }
-  //const handleAuth = (provider: any) => () => signIn(provider);
-
   return (
     <>
       <Container>
         <FlexContact>
           <FormCard>
             <Form>
-              <FlexRow>
-                <FormGroupLeft>
-                  <Label>First name</Label>
-                  <InputField type="text" placeholder="First Name"></InputField>
-                </FormGroupLeft>
-                <FormGroupRight>
-                  <Label>Last name</Label>
-                  <InputField type="text" placeholder="Last  Name"></InputField>
-                </FormGroupRight>
-              </FlexRow>
               <FormGroup>
                 <Label>Email</Label>
                 <InputField type="email" placeholder="Email"></InputField>
@@ -69,7 +50,7 @@ const Register = () => {
                 <InputField type="password" placeholder="password"></InputField>
               </FormGroup>
               <FormGroup>
-                <SubmitButton>Sign Up</SubmitButton>
+                <SubmitButton>Sign In</SubmitButton>
               </FormGroup>
               <OR>
                 <div>
@@ -79,30 +60,16 @@ const Register = () => {
                 </div>
               </OR>
               <FormGroup>
-                {/* {providers.map(({ name, Icon }) => (
-                  <GoogleLoginButton
-                    key={name}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      console.log("sign in with provider: ", name);
-                      signIn(name);
-                    }}
-                  >
-                    {<Icon />}
-                    <span>Sign In With {name}</span>
-                  </GoogleLoginButton>
-                ))} */}
                 <GoogleLoginButton onClick={handleSignIn}>
                   <GoogleLogoIcon />
                   <span>Sign In With Google</span>
                 </GoogleLoginButton>
               </FormGroup>
-              <div style={{ fontWeight: "bold" }}>
-                Already have an account?{" "}
-                <Link href="/auth/Login">
-                  <a> Sign In</a>
-                </Link>{" "}
-                instead
+              <div style={{ fontWeight: "bold"}}>
+                Don't have an account? {" "}
+                <Link href="/auth/Register">
+                  <a> Sign Up</a>
+                </Link>
               </div>
             </Form>
           </FormCard>
@@ -112,4 +79,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default SignIn;
