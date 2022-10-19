@@ -12,12 +12,13 @@ import {
   FormCard,
   Label,
   SubmitButton,
+  ForgotPassWord,
 } from "./Register.style";
-import { Container } from "../../common/UI-Elements.style";
+import { Container, Heading, Title } from "../../common/UI-Elements.style";
 import { OR } from "./Register.style";
 import Link from "next/link";
 
-const SignIn = () => {
+const PasswordReset = () => {
   const { data: session } = useSession();
   console.log(session);
   const { push } = useRouter();
@@ -39,37 +40,30 @@ const SignIn = () => {
     <>
       <Container>
         <FlexContact>
-          <FormCard>
+          <FormCard
+            style={{
+              height: "400px",
+              border: "1px solid #d0d4d9",
+              borderRadius: "5px",
+            }}
+          >
+            <Heading>Reset Your Password</Heading>
+            <p style={{ margin: "1rem" }}>
+              Don&apos;t remember your password? Let&apos;s get you a new one.
+            </p>
             <Form>
               <FormGroup>
                 <Label>Email</Label>
                 <InputField type="email" placeholder="Email"></InputField>
               </FormGroup>
               <FormGroup>
-                <Label>Password</Label>
-                <InputField type="password" placeholder="password"></InputField>
+                <SubmitButton>Reset Password</SubmitButton>
               </FormGroup>
-              <FormGroup>
-                <SubmitButton>Sign In</SubmitButton>
-              </FormGroup>
-              <OR>
-                <div>
-                  <hr />
-                  OR
-                  <hr />
-                </div>
-              </OR>
-              <FormGroup>
-                <GoogleLoginButton onClick={handleSignIn}>
-                  <GoogleLogoIcon />
-                  <span>Sign In With Google</span>
-                </GoogleLoginButton>
-              </FormGroup>
-              <div style={{ fontWeight: "bold" }}>
-                Don&apos;t have an account?{" "}
-                <Link href="/auth/Register">
-                  <a> Sign Up</a>
-                </Link>
+              <div style={{ fontWeight: "bold", margin: "1rem" }}>
+                Remember your password?{" "}
+                <Link href="/auth/Login">
+                  <a> Login</a>
+                </Link>{" "}
               </div>
             </Form>
           </FormCard>
@@ -79,4 +73,4 @@ const SignIn = () => {
   );
 };
 
-export default SignIn;
+export default PasswordReset;
