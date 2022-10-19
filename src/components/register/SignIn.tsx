@@ -65,8 +65,8 @@ const SignIn = () => {
                   <span>Sign In With Google</span>
                 </GoogleLoginButton>
               </FormGroup>
-              <div style={{ fontWeight: "bold"}}>
-                Don't have an account? {" "}
+              <div style={{ fontWeight: "bold" }}>
+                Don&apos;t have an account?{" "}
                 <Link href="/auth/Register">
                   <a> Sign Up</a>
                 </Link>
