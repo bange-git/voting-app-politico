@@ -34,6 +34,20 @@ const Header = () => {
             </a>
           </Link>
         </li>
+
+        <li>
+          <Link href="/auth/Login">
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                fontSize: 18,
+              }}
+            >
+              Sign In
+            </a>
+          </Link>
+        </li>
       </ul>
     </Flex>
   );
