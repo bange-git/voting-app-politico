@@ -3,43 +3,22 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FacebookLogo, GoogleLogo, GitHubLogo } from "../../../static/assets";
 import {
-  GoogleLoginButton,
-  GoogleLogoIcon,
-  FlexContact,
+  FlexContainer,
   InputField,
   Form,
   FormGroup,
   FormCard,
   Label,
   SubmitButton,
-  ForgotPassWord,
-} from "./Register.style";
-import { Container, Heading, Title } from "../../common/UI-Elements.style";
-import { OR } from "./Register.style";
+} from "../../common/Form-Element.style";
+import { Container, Heading } from "../../common/UI-Elements.style";
 import Link from "next/link";
 
 const PasswordReset = () => {
-  const { data: session } = useSession();
-  console.log(session);
-  const { push } = useRouter();
-
-  const providers = [
-    { name: "google", Icon: GoogleLogo },
-    { name: "facebook", Icon: FacebookLogo },
-    { name: "github", Icon: GitHubLogo },
-  ];
-
-  const handleSignIn = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
-    console.log("clicking on sign in/....");
-    e.preventDefault();
-    console.log("sign in with provider: ");
-    signIn();
-  };
-
   return (
     <>
       <Container>
-        <FlexContact>
+        <FlexContainer>
           <FormCard
             style={{
               height: "400px",
@@ -67,7 +46,7 @@ const PasswordReset = () => {
               </div>
             </Form>
           </FormCard>
-        </FlexContact>
+        </FlexContainer>
       </Container>
     </>
   );
