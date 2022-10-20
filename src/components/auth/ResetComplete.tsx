@@ -1,20 +1,20 @@
 import React from "react";
 import {
-  FlexContact,
+  FlexContainer,
   InputField,
   Form,
   FormGroup,
   FormCard,
   Label,
   SubmitButton,
-} from "./Register.style";
+} from "../../common/Form-Element.style";
 import { Container, Heading } from "../../common/UI-Elements.style";
 
 const ResetComplete = () => {
   return (
     <>
       <Container>
-        <FlexContact>
+        <FlexContainer>
           <FormCard
             style={{
               height: "400px",
@@ -43,7 +43,7 @@ const ResetComplete = () => {
               </FormGroup>
             </Form>
           </FormCard>
-        </FlexContact>
+        </FlexContainer>
       </Container>
     </>
   );

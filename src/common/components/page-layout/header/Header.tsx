@@ -20,9 +20,36 @@ const Header = () => {
             </a>
           </Link>
         </li>
+        <li>
+          <Link href="/admin/CreateEditPartyPage">
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                fontSize: 18,
+              }}
+            >
+              Parties
+            </a>
+          </Link>
+        </li>
 
         <li>
-          <Link href="/auth/Register">
+          <Link href="/admin/CreateEditOfficePage">
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                fontSize: 18,
+              }}
+            >
+              Offices
+            </a>
+          </Link>
+        </li>
+
+        <li>
+          <Link href="/auth/Login">
             <a
               style={{
                 textDecoration: "none",
