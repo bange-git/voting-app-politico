@@ -2,10 +2,9 @@ import React from "react";
 import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FacebookLogo, GoogleLogo, GitHubLogo } from "../../../static/assets";
+import { GoogleLoginButton, GoogleLogoIcon } from "./Register.style";
 import {
-  GoogleLoginButton,
-  GoogleLogoIcon,
-  FlexContact,
+  FlexContainer,
   InputField,
   Form,
   FormGroup,
@@ -13,7 +12,7 @@ import {
   Label,
   SubmitButton,
   ForgotPassWord,
-} from "./Register.style";
+} from "../../common/Form-Element.style";
 import { Container } from "../../common/UI-Elements.style";
 import { OR } from "./Register.style";
 import Link from "next/link";
@@ -39,7 +38,7 @@ const SignIn = () => {
   return (
     <>
       <Container>
-        <FlexContact>
+        <FlexContainer>
           <FormCard>
             <Form>
               <FormGroup>
@@ -88,7 +87,7 @@ const SignIn = () => {
               </div>
             </Form>
           </FormCard>
-        </FlexContact>
+        </FlexContainer>
       </Container>
     </>
   );
