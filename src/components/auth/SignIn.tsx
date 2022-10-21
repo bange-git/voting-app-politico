@@ -1,7 +1,5 @@
 import React from "react";
-import { useSession, signIn, signOut } from "next-auth/react";
-import { useRouter } from "next/router";
-import { FacebookLogo, GoogleLogo, GitHubLogo } from "../../../static/assets";
+import { signIn } from "next-auth/react";
 import { GoogleLoginButton, GoogleLogoIcon } from "./Register.style";
 import {
   FlexContainer,
@@ -18,16 +16,6 @@ import { OR } from "./Register.style";
 import Link from "next/link";
 
 const SignIn = () => {
-  const { data: session } = useSession();
-  console.log(session);
-  const { push } = useRouter();
-
-  const providers = [
-    { name: "google", Icon: GoogleLogo },
-    { name: "facebook", Icon: FacebookLogo },
-    { name: "github", Icon: GitHubLogo },
-  ];
-
   const handleSignIn = (e: React.MouseEvent<HTMLElement, MouseEvent>) => {
     console.log("clicking on sign in/....");
     e.preventDefault();

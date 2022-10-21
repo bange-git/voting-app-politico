@@ -49,6 +49,20 @@ const Header = () => {
         </li>
 
         <li>
+          <Link href="/CandidacyPage">
+            <a
+              style={{
+                textDecoration: "none",
+                color: "#fff",
+                fontSize: 18,
+              }}
+            >
+              Submit Candidacy
+            </a>
+          </Link>
+        </li>
+
+        <li>
           <Link href="/auth/Register">
             <a
               style={{

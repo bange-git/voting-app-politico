@@ -58,10 +58,10 @@ export const Title = styled.h2`
 export const Description = styled.p`
   line-height: 1.5;
   font-size: 1.5rem;
-  padding-left: 2rem;
+  margin-bottom: 1rem;
 `;
 
 export const Heading = styled.h2`
-margin: 1rem;
-text-align: center;
-`
+  margin: 1rem;
+  text-align: center;
+`;
