@@ -49,7 +49,7 @@ const Header = () => {
         </li>
 
         <li>
-          <Link href="/auth/Login">
+          <Link href="/auth/Register">
             <a
               style={{
                 textDecoration: "none",
