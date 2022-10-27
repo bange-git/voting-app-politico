@@ -20,7 +20,7 @@ const UserProfile = (props: Props) => {
   const menuRef: React.RefObject<HTMLDivElement> = useRef(null);
 
   useEffect(() => {
-    const handleProfileClose = (e) => {
+    const handleProfileClose = (e:any) => {
       if (!menuRef.current?.contains(e.target)) {
         props.closeProfile();
       }
