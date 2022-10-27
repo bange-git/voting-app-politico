@@ -13,7 +13,7 @@ export const Main = styled.div`
   align-items: flex-start;
   margin: 0 auto;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
@@ -28,7 +28,7 @@ export const Grid = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 2rem 0;
+  gap: 1rem;
 `;
 
 export const Card = styled.div`
@@ -58,7 +58,7 @@ export const Title = styled.h2`
 export const Description = styled.p`
   line-height: 1.5;
   font-size: 1.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 `;
 
 export const Heading = styled.h2`

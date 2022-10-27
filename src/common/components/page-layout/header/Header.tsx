@@ -1,96 +1,97 @@
 import Link from "next/link";
-import React from "react";
-import { Flex, Title } from "./Header.style";
+import React, { useState } from "react";
+import DropDown from "./DropDown";
+import { FaBars } from "react-icons/fa";
+import { FaTimes } from "react-icons/fa";
+import { Navbar, NavLink, Logo, OpenMenuButton } from "./Header.style";
+import Image from "next/image";
+import UserProfile from "./UserProfile";
 
 const Header = () => {
+  const [openProfile, setOpenProfile] = useState<boolean>(false);
+
+  const closeProfile = () => {
+    setOpenProfile(false);
+  };
+
+  const [isAdminDropdownVisible, setIsAdminDropdownVisible] =
+    useState<boolean>(false);
+
+  const [extendedNavbar, setExtendedNavbar] = useState<boolean>(false);
+
+  const showAdminDropdown = () => {
+    setIsAdminDropdownVisible(true);
+  };
+
+  const closeAdminDropdown = () => {
+    setIsAdminDropdownVisible(false);
+  };
+
+  const toggleExtended = () => {
+    setExtendedNavbar(false);
+  };
+
   return (
-    <Flex>
-      <Title>Politico</Title>
-      <ul>
+    <Navbar extendedNavbar={extendedNavbar}>
+      <Logo>Politico</Logo>
+      <OpenMenuButton onClick={() => setExtendedNavbar((curr) => !curr)}>
+        {extendedNavbar ? <FaTimes /> : <FaBars />}
+      </OpenMenuButton>
+      <ul onClick={toggleExtended}>
         <li>
           <Link href="/">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Home
-            </a>
+            <NavLink>Home</NavLink>
           </Link>
         </li>
         <li>
-          <Link href="/admin/CreateEditPartyPage">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Parties
-            </a>
+          <Link href="/vote">
+            <NavLink>Voting</NavLink>
+          </Link>
+        </li>
+        <li>
+          <Link href="/parties">
+            <NavLink>All Parties</NavLink>
+          </Link>
+        </li>
+        <li>
+          <Link href="/candidacy">
+            <NavLink>Submit Candidacy</NavLink>
           </Link>
         </li>
 
         <li>
-          <Link href="/admin/CreateEditOfficePage">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Offices
-            </a>
+          <Link href="/register">
+            <NavLink>Sign Up</NavLink>
           </Link>
         </li>
 
         <li>
-          <Link href="/CandidacyPage">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Submit Candidacy
-            </a>
+          <Link href="/login">
+            <NavLink>Sign In</NavLink>
           </Link>
         </li>
+        <li
+          onClick={showAdminDropdown}
+          onMouseEnter={showAdminDropdown}
+          onMouseLeave={closeAdminDropdown}
+        >
+          <h3>Admin</h3>
 
-        <li>
-          <Link href="/auth/Register">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Sign Up
-            </a>
-          </Link>
+          {isAdminDropdownVisible && <DropDown />}
         </li>
-
-        <li>
-          <Link href="/auth/Login">
-            <a
-              style={{
-                textDecoration: "none",
-                color: "#fff",
-                fontSize: 18,
-              }}
-            >
-              Sign In
-            </a>
-          </Link>
+        <li onClick={() => setOpenProfile((curr) => !curr)}>
+          <Image
+            src="/images/bio.jpg"
+            width={40}
+            height={40}
+            style={{ borderRadius: "50%" }}
+          />
         </li>
       </ul>
-    </Flex>
+      {openProfile && (
+        <UserProfile closeProfile={closeProfile} openProfile={openProfile} />
+      )}
+    </Navbar>
   );
 };
 
