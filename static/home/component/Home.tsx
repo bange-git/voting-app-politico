@@ -2,12 +2,17 @@ import React from "react";
 import Image from "next/image";
 import { Banner, Title3, Button, LeadSection } from "./Home.style";
 import { useRouter } from "next/router";
-import {  Title, Container, Card, Grid} from "../../../src/common/UI-Elements.style";
+import {
+  Title,
+  Container,
+  Card,
+  Grid,
+} from "../../../src/common/UI-Elements.style";
 
 const HomePage = () => {
   const { push, asPath } = useRouter();
 
-  const handleSignIn = () => push(`/auth/Register?callbackUrl=${asPath}`);
+  const handleSignIn = () => push(`/register?callbackUrl=${asPath}`);
 
   return (
     <Container>

@@ -1,5 +1,5 @@
 import React from "react";
-import CreateEditParty from "../../components/admin/CreateEditParty";
+import CreateEditParty from "../components/admin/CreateEditParty";
 
 const CreateEditPartyPage = () => {
   return <CreateEditParty />;

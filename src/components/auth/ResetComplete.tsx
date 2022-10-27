@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -14,7 +14,7 @@ const ResetComplete = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard
             style={{
               height: "400px",
@@ -43,7 +43,7 @@ const ResetComplete = () => {
               </FormGroup>
             </Form>
           </FormCard>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );

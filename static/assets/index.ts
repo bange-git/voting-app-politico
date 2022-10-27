@@ -1,7 +1,21 @@
 import FacebookLogoSvg from "./svg/Facebook_logo.svg";
 import GoogleLogoSvg from "./svg/Google_logo.svg";
 import GitHubLogoSvg from "./svg/Github_logo.svg";
+import HomeLogoSvg from "./svg/Home-Fill.svg";
+import LogoutLogoSvg from "./svg/Logout-Fill.svg";
+import SettingsLogoSvg from "./svg/Settings-Fill.svg";
+import WriteLogoSvg from "./svg/Write-Fill.svg";
+import NoteLogoSvg from "./svg/Note-Fill.svg";
+import UserAvatarSvg from "./svg/User-Avatar.svg";
+import JournalLogoSvg from "./svg/Journal-Fill.svg";
 
 export const FacebookLogo = FacebookLogoSvg;
 export const GoogleLogo = GoogleLogoSvg;
 export const GitHubLogo = GitHubLogoSvg;
+export const HomeLogo = HomeLogoSvg;
+export const LogoutLogo = LogoutLogoSvg;
+export const SettingsLogo = SettingsLogoSvg;
+export const WriteLogo = WriteLogoSvg;
+export const NoteLogo = NoteLogoSvg;
+export const UserAvatar = UserAvatarSvg;
+export const JournalLogo = JournalLogoSvg;

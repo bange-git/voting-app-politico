@@ -1,12 +1,12 @@
 import React from "react";
-import { FooterDiv } from "./Footer.style";
+import { FooterContainer } from "./Footer.style";
 
 const FooterSection = () => {
   return (
-    <FooterDiv>
+    <FooterContainer>
       <h2>Welcome to Politico</h2>
       <p>Where every vote counts. copyright@2022</p>
-    </FooterDiv>
+    </FooterContainer>
   );
 };
 

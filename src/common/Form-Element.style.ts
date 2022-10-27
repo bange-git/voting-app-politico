@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
-export const FlexContainer = styled.div`
+export const ContentBody = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  padding-top: 8rem;
 `;
 
 export const FlexRow = styled.div`
@@ -14,7 +15,7 @@ export const FlexRow = styled.div`
   align-items: center;
   width: 100%;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     flex-direction: column;
   }
 `;
@@ -22,9 +23,8 @@ export const FlexRow = styled.div`
 export const FormCard = styled.div`
   width: 35%;
   padding: 2rem;
-  margin: 8rem 0 0;
 
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 98%;
     padding: 2rem;
   }
@@ -46,7 +46,7 @@ export const FormGroup = styled.div`
 
 export const FormGroupLeft = styled(FormGroup)`
   width: 49%;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 100%;
     margin-right: unset;
     margin: 10px auto;
@@ -54,16 +54,16 @@ export const FormGroupLeft = styled(FormGroup)`
 `;
 
 export const Select = styled.select`
-padding-left: 10px;
-height: 50px;
-border-radius: 5px;
-border: 1px solid gray;
+  padding-left: 10px;
+  height: 50px;
+  border-radius: 5px;
+  border: 1px solid gray;
 `;
 
 export const FormGroupRight = styled(FormGroup)`
   width: 49%;
   margin-left: 4px;
-  @media (max-width: 768px) {
+  @media (max-width: 900px) {
     width: 100%;
     margin-left: unset;
     margin: 10px auto;

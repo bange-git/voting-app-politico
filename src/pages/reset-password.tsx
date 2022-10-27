@@ -1,5 +1,5 @@
 import React from "react";
-import ResetComplete from "../../components/auth/ResetComplete";
+import ResetComplete from "../components/auth/ResetComplete";
 
 const ResetPassword = () => {
   return <ResetComplete />;

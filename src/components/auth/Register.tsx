@@ -2,7 +2,7 @@ import React from "react";
 import { signIn } from "next-auth/react";
 import { GoogleLoginButton, GoogleLogoIcon } from "./Register.style";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard>
             <Form>
               <FlexRow>
@@ -80,14 +80,14 @@ const Register = () => {
               </FormGroup>
               <div style={{ fontWeight: "bold" }}>
                 Already have an account?{" "}
-                <Link href="/auth/Login">
+                <Link href="/login">
                   <a> Sign In</a>
                 </Link>{" "}
                 instead
               </div>
             </Form>
           </FormCard>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );

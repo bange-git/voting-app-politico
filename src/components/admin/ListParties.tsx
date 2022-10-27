@@ -1,12 +1,10 @@
-import { FlexContainer } from "../../common/Form-Element.style";
+import { ContentBody } from "../../common/Form-Element.style";
 import { Container } from "../../common/UI-Elements.style";
 
 const ListParties = () => {
-
- 
   return (
     <Container>
-      <FlexContainer>
+      <ContentBody>
         <table className="styled-table">
           <thead>
             <tr>
@@ -63,7 +61,7 @@ const ListParties = () => {
               <td>SDF means Social Democratic Front</td>
               <td>
                 <button className="btn btn-edit">Edit</button>
-                <button className="btn btn-delete" >Delete</button>
+                <button className="btn btn-delete">Delete</button>
                 <button className="btn btn-view">View</button>
               </td>
             </tr>
@@ -81,7 +79,7 @@ const ListParties = () => {
             </tr>
           </tbody>
         </table>
-      </FlexContainer>
+      </ContentBody>
     </Container>
   );
 };
