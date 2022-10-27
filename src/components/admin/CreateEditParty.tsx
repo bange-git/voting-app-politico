@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 //import toast from "../../common/Toast/Toast";
 import { toast } from "react-toastify";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -54,7 +54,7 @@ const CreateEditParty = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard>
             <Form>
               <FormGroup>
@@ -157,7 +157,7 @@ const CreateEditParty = () => {
               ))}
             </tbody>
           </table>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );

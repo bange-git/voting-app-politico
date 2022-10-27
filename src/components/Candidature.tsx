@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -51,7 +51,7 @@ const Candidature = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard>
             <Description>
               Do you want to be a candidate for the upcoming election?, fill and
@@ -157,7 +157,7 @@ const Candidature = () => {
               ))}
             </tbody>
           </table>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );

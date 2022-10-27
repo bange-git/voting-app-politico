@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -37,7 +37,7 @@ const CreateEditOffice = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard>
             <Form>
               <FormGroup>
@@ -108,7 +108,7 @@ const CreateEditOffice = () => {
               ))}
             </tbody>
           </table>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );

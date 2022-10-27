@@ -3,7 +3,7 @@ import { useSession, signIn, signOut } from "next-auth/react";
 import { useRouter } from "next/router";
 import { FacebookLogo, GoogleLogo, GitHubLogo } from "../../../static/assets";
 import {
-  FlexContainer,
+  ContentBody,
   InputField,
   Form,
   FormGroup,
@@ -18,7 +18,7 @@ const PasswordReset = () => {
   return (
     <>
       <Container>
-        <FlexContainer>
+        <ContentBody>
           <FormCard
             style={{
               height: "400px",
@@ -46,7 +46,7 @@ const PasswordReset = () => {
               </div>
             </Form>
           </FormCard>
-        </FlexContainer>
+        </ContentBody>
       </Container>
     </>
   );
