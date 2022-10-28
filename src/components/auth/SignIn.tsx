@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { signIn } from "next-auth/react";
+import axios from "axios";
 import { GoogleLoginButton, GoogleLogoIcon } from "./Register.style";
 import {
   ContentBody,
@@ -23,6 +24,28 @@ const SignIn = () => {
     signIn();
   };
 
+  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState(false);
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const { data } = await axios.get(
+        "https://jsonplaceholder.typicode.com/users/1"
+      );
+      setUser(data);
+    } catch (error) {
+      setError(true);
+    }
+    setLoading(false);
+  };
+
   return (
     <>
       <Container>
@@ -30,12 +53,22 @@ const SignIn = () => {
           <FormCard>
             <Form>
               <FormGroup>
-                <Label>Email</Label>
-                <InputField type="email" placeholder="Email"></InputField>
+                <Label data-testid="label">Email</Label>
+                <InputField
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                ></InputField>
               </FormGroup>
               <FormGroup>
                 <Label>Password</Label>
-                <InputField type="password" placeholder="password"></InputField>
+                <InputField
+                  type="password"
+                  placeholder="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                ></InputField>
               </FormGroup>
               <ForgotPassWord>
                 <Link href="/reset-password">
@@ -52,7 +85,13 @@ const SignIn = () => {
                 </Link>
               </ForgotPassWord>
               <FormGroup>
-                <SubmitButton>Sign In</SubmitButton>
+                <SubmitButton
+                  data-testid="button"
+                  disabled={!email || !password}
+                  onClick={handleSubmit}
+                >
+                  {loading ? "please wait" : "Sign In"}
+                </SubmitButton>
               </FormGroup>
               <OR>
                 <div>
