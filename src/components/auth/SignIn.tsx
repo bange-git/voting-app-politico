@@ -50,7 +50,6 @@ const SignIn = () => {
     <>
       <Container>
         <ContentBody>
-          <span>{user.email}</span>
           <FormCard>
             <Form>
               <FormGroup>
